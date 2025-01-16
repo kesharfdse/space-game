@@ -1,1 +1,2 @@
 #property
+print("hello world:")
