@@ -1,7 +1,7 @@
 <h1>Space Invader Game<h1>
 <br>
 <h2>Space Invader Game<h2>
-<p>Welcome to the Space Invader game!<br>
+<p><ul>Welcome to the Space Invader game!<ul><br>
 In this game, you control a spaceship and fight against invading 
 UFOs. The goal is to shoot down as many UFOs as possible while 
 avoiding them. If the UFOs reach the bottom of the screen, the 
@@ -15,15 +15,15 @@ How to Play<br>
   and a "Game Over" message will appear.<br>
 <br>
  Controls<br>
-Left Arrow: Move left<br>
-Right Arrow: Move right<br>
+1.Left Arrow: Move left<br>
+2.Right Arrow: Move right<br>
 <br>
 Features<br>
-Game Over: Ends the game when the UFO reaches the bottom.<br>
-Smooth movement: Spaceship and UFOs move fluidly.<br>
-Enemy Collision: When the bullet hits a UFO, it will disappear, <br>
+1.Game Over: Ends the game when the UFO reaches the bottom.<br>
+2.Smooth movement: Spaceship and UFOs move fluidly.<br>
+3.Enemy Collision: When the bullet hits a UFO, it will disappear, 
 and the score will increase.<br>
 <br>
 Requirements<br>
-Python 3.x installed on your machine.<br>
-Pygame library to run the game.<br.>
+1.Python 3.x installed on your machine.<br>
+2.Pygame library to run the game.<br.>
