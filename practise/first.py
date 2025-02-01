@@ -1,6 +1,7 @@
 #first game window
 import pygame as pg
 import random
+import math
 pg.init()#initialize the screen
 screen=pg.display.set_mode((800,600))#inside it is a tuple so two small braces
 running=True
@@ -21,7 +22,7 @@ space_img=pg.image.load("practise/space.jpg")
 #bullet
 bullet_img=pg.image.load("practise/bullet.png")
 
-bullet_speed=0.3
+bullet_speed=0.8
 #GAME LOOP
 
 
@@ -32,7 +33,11 @@ def player(x,y):
 def ufo(x,y):
     screen.blit(ufo_img,(x,y))    
 def bullet(x,y): 
-    screen.blit(bullet_img,(x,y))      
+    screen.blit(bullet_img,(x,y))     
+    
+def is_collision(ufo_x, ufo_y, bullet_x, bullet_y):
+    distance = math.sqrt((ufo_x - bullet_x) ** 2 + (ufo_y - bullet_y) ** 2)
+    return distance < 27  # Collision threshold     
 
 bullet_x=playerx+24
 bullet_y=playery-15     
@@ -56,7 +61,7 @@ while running:
         bullet_y -=bullet_speed
     elif bullet_y<=0:
         bullet_y=playery-15
-        bullet_x=playerx=24    
+        bullet_x=playerx+24    
     bullet(bullet_x,bullet_y)      
   
     
@@ -73,7 +78,15 @@ while running:
     if (playerx<=0):
         playerx=0
     if (playerx>=730):
-        playerx=730                 
+        playerx=730     
+        
+    if is_collision(ufox, ufoy, bullet_x, bullet_y):
+        print("💥 Enemy Hit! 💥")  # Print message in console (Replace with score system later)
+        bullet_y = playery  # Reset bullet
+        bullet_state = "ready"
+        ufo_x = random.randint(50, 750)  # Move enemy to a new random position
+        ufo_y = random.randint(50, 150)  
+                  
         
                              
     
