@@ -17,11 +17,11 @@ playery=530
 ufo_img=pg.image.load("practise/ufo.png")
 ufox=40
 ufoy=40
-ufospeed=0.3
+ufospeed=0.8
 space_img=pg.image.load("practise/space.jpg")
 #bullet
 bullet_img=pg.image.load("practise/bullet.png")
-
+explosion_img=pg.image.load("practise/exp1.png")
 bullet_speed=0.8
 #GAME LOOP
 score=0
@@ -81,6 +81,10 @@ while running:
         playerx=730     
         
     if is_collision(ufox, ufoy, bullet_x, bullet_y):
+        screen.blit(explosion_img,(ufox,ufoy)) 
+        pg.display.update() 
+        pg.time.delay(500)   
+        
         print("💥 Enemy Hit! 💥")  # Print message in console (Replace with score system later)
         bullet_y = playery  # Reset bullet
         bullet_state = "ready"
