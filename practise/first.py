@@ -24,7 +24,7 @@ bullet_img=pg.image.load("practise/bullet.png")
 
 bullet_speed=0.8
 #GAME LOOP
-
+score=0
 
 # player   
 def player(x,y):
@@ -84,8 +84,19 @@ while running:
         print("💥 Enemy Hit! 💥")  # Print message in console (Replace with score system later)
         bullet_y = playery  # Reset bullet
         bullet_state = "ready"
-        ufo_x = random.randint(50, 750)  # Move enemy to a new random position
-        ufo_y = random.randint(50, 150)  
+        ufox = random.randint(50, 750)  # Move enemy to a new random position
+        ufoy = random.randint(50, 150)  
+        score +=1
+        
+    if ufoy >= 400:
+        print("Game Over!")
+        font = pg.font.Font(None, 64)
+        game_over_text = font.render("GAME OVER", True, (255, 0, 0))
+        screen.blit(game_over_text, (250, 250))
+        pg.display.update()
+        pg.time.delay(2000)  # Pause for 2 seconds before closing
+        running = False
+ 
                   
         
                              
