@@ -2,8 +2,10 @@
 <br>
 <h2>Space Invader Game<h2>
 <p>Welcome to the Space Invader game!<br>
-In this game, you control a spaceship and fight against invading UFOs. The goal is to shoot down as<br>
-many UFOs as possible while avoiding them. If the UFOs reach the bottom of the screen, the game ends.<br>
+In this game, you control a spaceship and fight against invading 
+UFOs. The goal is to shoot down as many UFOs as possible while 
+avoiding them. If the UFOs reach the bottom of the screen, the 
+game ends.<br>
 <br><p>
 How to Play<br>
 1.Move your spaceship left and right using the arrow keys.<br>
